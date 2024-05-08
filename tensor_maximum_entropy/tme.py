@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-from utils import minimize, summarizeLDS, extractFeatures, sumTensor
+from .utils import minimize, summarizeLDS, extractFeatures, sumTensor
 
 
 def diagKronSum(Ds):
@@ -273,10 +273,8 @@ def TME(dataTensor, mask, model_dim, numSurrogates=1000):
 
 if __name__ == '__main__':
     model_dim = 10
-    # test = np.random.rand(61, 50, 10)
 
     import scipy.io
-
     data = scipy.io.loadmat('./exampleData.mat')
     dataTensor = data['dataTensor']
 
